@@ -1,0 +1,37 @@
+@use 'base/variable' as v;
+@use 'base/mixins' as m;
+
+
+.lineup{
+    background-color: v.$rosa;
+    padding: 5rem 0;
+
+    h3,p{
+        text-align: center;
+        color: v.$blanco;
+    }
+    .dia{
+        text-transform: uppercase;
+        margin-bottom: 5rem;
+    }
+}
+
+.escenarios-contenedor{
+    @include m.tablet {
+        @include m.grid(2, 5rem)
+    }
+
+    p{
+        color: v.$negro;
+    }
+    .escenario{
+        padding-top: 2rem;
+    }
+}
+
+.bg-amarillo{
+    background-color: v.$amarillo;
+}
+.bg-verde{
+    background-color: v.$verde;
+}
